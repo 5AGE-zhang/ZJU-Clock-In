@@ -33,6 +33,8 @@ jobs:
           PASSWORDWTY: ${{ secrets.PASSWORDWTY }}
           EAI_SESSWTY: ${{ secrets.EAI_SESSWTY }}
         run: |
+          echo ${EAI_SESS}
+          echo ${EAI_SESSWTY}
           python3 clock-in.py ${ACCOUNT} ${PASSWORD} ${EAI_SESS}
           python3 clock-in.py ${ACCOUNTWTY} ${PASSWORDWTY} ${EAI_SESSWTY}
           
